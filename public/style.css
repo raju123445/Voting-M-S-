@@ -1,0 +1,189 @@
+body{
+  background-image: url(bgkimg.avif);
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    margin: 0;
+    padding: 0;
+    height: 200%;
+}
+
+.navbar {
+    position: sticky;
+    height: 45px;
+    /* top: 0%; */
+    background-color: #87c8be;
+    /* padding: 1px; */
+    padding-bottom: 10px;
+    text-align: right;
+    scroll-behavior:initial;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+.heading{
+    text-align: left;
+    /* background-color: black; */
+    width:300px;
+    height: 10px;
+    /* padding-bottom: 10px; */
+    padding-left: 10px;
+  
+    
+}
+
+h1{
+    height: 50px;
+    width: 800px;
+}
+
+  .menu {
+    display:contents;
+    height: auto;
+    flex-direction: column;
+    /* background-color: #fff; */
+    position:relative;
+    right: 10px;
+    top: 40px;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    display: contents;
+  }
+
+  .menu a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  /* .heading{
+    width: 10000px;
+    display: block;
+  } */
+
+  .menu a:hover {
+    background-color: #555;
+  }
+
+  /* Hamburger icon styling */
+  .hamburger {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+.hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+.vote-qoute{
+  align-items: center;
+  justify-content: center;
+}
+
+.vote-qoute h3{
+  padding-left: 409px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  /* text-align: center; */
+  display: flex;
+  font-family: monospace;
+  overflow: hidden;       /* Hides the overflow content */
+  white-space: nowrap;    /* Prevents text from wrapping to the next line */
+  border-right: 3px solid black; /* Cursor effect */
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+  align-items: center;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+
+.login-with-image{
+    height: 350px;
+    width: 700px;
+    background-color: antiquewhite;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 2;
+    display:flex;
+}
+
+.voter-ID{
+    height: 20px;
+    width: 300px;
+    background-color: #f2f2f2;
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+label{
+  font-size: 16px;
+  margin: 10px;
+}
+
+.password{
+  height: 20px;
+  width: 300px;
+  background-color: #f2f2f2;
+  border: 2px solid white;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.login-form{
+  margin: 10px;
+  height: 300px;
+  width: 350px;
+  padding: 20px;
+}
+
+.login-form h1{
+  text-align: left;
+}
+
+.login-vot-image{
+  height: 200px;
+  width: 250px;
+  margin: 10px;
+}
+
+button {
+  background-color: #4CAF50; /* Initial background color */
+  color: white;
+  /* padding: 15px 32px; */
+  /* text-align: center; */
+  font-size: 16px;
+  border: none;
+  border-radius: 12px; /* Curved edges */
+  cursor: pointer; /* Makes the cursor a pointer when hovering */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+  margin: 10px;
+  height: 40px;
+  width: 70px;
+}
+
+button:hover {
+  background-color: #45a049; /* Background color on hover */
+}

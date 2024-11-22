@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote for a Candidate</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vote for Your Candidate</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Candidate ID</th>
+                <th>Symbol</th>
+                <th>Candidate Name</th>
+                <th>Party Name</th>
+                <th>Position</th>
+                <th>Vote Button</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (candidate.length > 0) { %>
+                <% for (var i = 0; i < candidate.length; i++) { %>
+                    <tr>
+                        <td><%= candidate[i].candidate_id %></td>
+                        <td>
+                            <img src="/uploads/<%= candidate[i].symbol_path %>" alt="Symbol" style="width:50px; height:50px;">
+                        </td>
+                        <td><%= candidate[i].name %></td>
+                        <td><%= candidate[i].party %></td>
+                        <td><%= candidate[i].position %></td>
+                        <td><form action="/voted" method="post">
+                            <input type="submit" name="candidate_id" value="<%= candidate[i].candidate_id %>">
+                        </form></td>
+                    </tr>
+                <% } %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4">There is no database available</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

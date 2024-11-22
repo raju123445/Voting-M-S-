@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome, <%= name %>!</h1>
+        <p><strong>Email:</strong> <%= email %></p>
+        <p><strong>Voter ID:</strong> <%= voterId %></p>
+        <form action="/logout" method="POST">
+            <button type="submit" class="logout-btn">Log Out</button>
+        </form>
+        <form action="/gotovote" method="get">
+            <button type="submit" class="">Go to Vote</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <input type="checkbox" id="menuToggle" style="display: none;">
+
+        <lable class="humburgur" for="menuToggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </lable>
+        
+        <!-- Menu -->
+        <div class="menu">
+            <div class="heading">
+                <h1>ONLINE VOTING SYSTEM</h1>
+            </div>
+            <a href="user_register">New User</a>
+            <a href="services">Services</a>
+            <a href="#">About</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+    <div class="vote-qoute" >
+        <h3 class="vote-qoute1">Vote Your Voice Maters </h3>
+    </div>
+    <!-- This div is for login -->
+    <div class="login-with-image">
+        <div class="login-form">
+            <h1>Voter Login</h1>
+            <form action="/get-login" method="POST"> <!--to get login -->
+            <label for="voter_id">Enter Voter ID</label> <br>
+            <input type="text" id="voter_id" class="voter-ID" name="voter_id" placeholder="Voter ID"><br>
+            <label for="password">Enter Password</label><br>
+            <input type="password" id="password" class="password" name ="password" placeholder="Password">
+            <br>
+            <button type="submit" >submit</button>
+        </div>
+        <img src="voteimg.png" alt="Vote Image" class="login-vot-image">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

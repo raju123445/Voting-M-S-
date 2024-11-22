@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Result</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Election Result</h1>
+
+    <% if (winner) { %>
+        <h3>The winner is Candidate ID: <%= winner.candidate_id %> with <%= winner.votes %> votes</h3>
+    <% } else { %>
+        <h3>No votes have been cast yet.</h3>
+    <% } %>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Vote ID</th>
+                <th>Voter ID</th>
+                <th>Candidate ID</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (votes.length > 0) { %>
+                <% for (var i = 0; i < votes.length; i++) { %>
+                    <tr>
+                        <td><%= votes[i].vote_id %></td>
+                        <td><%= votes[i].voter_id %></td>
+                        <td><%= votes[i].candidate_id %></td>
+                        <td><%= votes[i].voted_at %></td>
+                    </tr>
+                <% } %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4">There is no database available</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
