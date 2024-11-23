@@ -10,6 +10,7 @@ exports.user_data =  (req, res) => {
         name: user.name,
         email: user.email,
         voterId: user.voter_id,
+        aadhar : user.aadhar_no,
     });
     
 };
